@@ -1,0 +1,115 @@
+:root {
+  font-size: 14px; /* Thiết lập kích thước chữ gốc cho toàn bộ trang */
+}
+.carousel-container {
+  position: relative;      
+  padding: 0 2rem;         
+  overflow: hidden;         
+}
+.carousel-track {
+  display: flex;            
+  gap: 2rem;                 
+  padding-bottom: 1rem;    
+  overflow-x: auto;          
+  overflow-y: hidden;       
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;             
+}
+.card {
+  position: relative;       
+  padding: 1rem;      
+  border-radius: 12px;     
+
+}
+.card:hover {
+  border-color: #2196f3;    
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.3);
+}
+.card img {
+  margin: 20px 5px 15px 20px;  
+  object-fit: contain;      
+  max-width: 100% ;       
+  height: auto;             
+}
+.stock-label {
+  position: absolute;       
+  display: flex;            
+  background: #fff;
+  padding: 0.25em 0;
+  gap: 1rem;
+}
+.stock-label span {
+  line-height: 1;           
+ 
+}
+.reviews {
+  color: #ffb400;         
+}
+.product-title {
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 0.5rem 0;
+}
+.title-line {
+  display: block;           
+}
+.price {
+  font-weight: bold;
+}
+.price .old {
+  display: block;
+  color: #bbb;             
+  font-weight: normal;
+  text-decoration: line-through;
+}
+.price .current {
+  color: #000;              
+  font-size: 1.25rem;       
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;                               
+  transform: translateY(-50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 50%;
+  background: #d0ecff;                    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;                          
+  font-size: 2rem;
+  color: #ffc107;                         
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+.nav-btn.prev {
+  left: 2rem;                             
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.nav-btn.next {
+  right: 0.5rem;                          
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.nav-btn:hover {
+  background: #51b3ff;                   
+}
+@media (min-width: 64rem) {
+  .card {
+    width: 18rem; 
+  }
+}

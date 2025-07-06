@@ -1,0 +1,41 @@
+.zip-banner{
+    background-color: #f6f8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    margin-top: 4rem;
+}
+.zip-logo{
+    height: 24px;
+    margin-right: 1rem;
+    
+}
+.zip-text{
+    color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+.blue-bar {
+  width: 3px;
+  height: 20px;
+  background-color: #2196f3; /* xanh dương */
+  border-radius: 4px;
+}
+.zip-text strong{
+    color: #0a0a3c;
+    font-weight: 600;
+}
+.learn-more{
+    margin-left: 0.25rem;
+    color: #1a1a8c;
+    text-decoration: underline;
+    font-size: 0.85rem;
+}
+
