@@ -1,0 +1,134 @@
+
+
+/* Phần cho mỗi nhóm sản phẩm (ví dụ: Custom Builds, MSI Laptops) */
+.category-section {
+  position: relative;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+/* Grid chứa các sản phẩm và banner */
+.product-grid {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Thẻ banner cho mỗi nhóm sản phẩm */
+.banner-card {
+ 
+ position: relative;
+ padding: 4rem;
+ border-radius: 12px;
+}
+.banner-card:hover{
+  border-color: #2196f3;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.3);
+}
+
+
+
+/* Tiêu đề "Custom" */
+.category-title-custom {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Tiêu đề "Builds" */
+.category-title-builds {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 5px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Liên kết "See All Products" */
+.view-all-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 35px;
+}
+
+/* Thẻ sản phẩm */
+.product-card {
+position: relative; 
+padding: 1rem;
+border-radius: 12px;
+}
+
+/* Hình ảnh sản phẩm */
+.product-img {
+  margin: 35px 20px 15px 20px;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Nhãn trạng thái tồn kho */
+.stock-status {
+  position: absolute;
+  display: flex;
+  background:#fff;
+  padding: 0.25rem 0;
+  gap: 1rem;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Đánh giá sao */
+.review-rating {
+  display: flex;
+  color: #ffb400;
+}
+
+.review-rating svg {
+  color: #ffb400; /* Màu vàng cho sao */
+  font-size: 1rem;
+}
+
+/* Tên sản phẩm */
+.product-name {
+  font-size: 0.9rem;
+  font-family: 'Poppins';
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 0.5rem 0;
+}
+.product-name span{
+  display: block;
+  margin: 0.2rem 0;
+}
+
+/* Giá sản phẩm */
+.product-price {
+   font-weight: bold;
+}
+
+.old-price {
+  display: block;
+  color: #bbb;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.current-price {
+  font-size: 1.25rem;
+  color: #000;
+}
+
+

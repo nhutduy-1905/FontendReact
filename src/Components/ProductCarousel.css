@@ -1,115 +1,131 @@
 :root {
-  font-size: 14px; /* Thiết lập kích thước chữ gốc cho toàn bộ trang */
+  font-size: 14px; /* Thiết lập kích thước chữ gốc (base font-size) cho toàn bộ trang, dễ dàng tùy chỉnh kích thước chữ theo rem */
 }
+
 .carousel-container {
-  position: relative;      
-  padding: 0 2rem;         
-  overflow: hidden;         
+  position: relative;      /* Cho phép các phần tử con (như nút điều hướng) vị trí tuyệt đối bên trong */
+  padding: 0 2rem;         /* Thêm khoảng trống hai bên trái và phải để không bị cắt nội dung */
+  overflow: hidden;        /* Ẩn phần nội dung tràn ra ngoài khung chứa */
 }
+
 .carousel-track {
-  display: flex;            
-  gap: 2rem;                 
-  padding-bottom: 1rem;    
-  overflow-x: auto;          
-  overflow-y: hidden;       
-  -ms-overflow-style: none;  
-  scrollbar-width: none;     
+  display: flex;           /* Hiển thị các card thành hàng ngang */
+  gap: 2rem;               /* Khoảng cách giữa các card */
+  padding-bottom: 1rem;    /* Khoảng đệm phía dưới để tạo không gian cho shadow hoặc margin card */
+  overflow-x: auto;        /* Cho phép cuộn ngang khi nội dung vượt khung */
+  overflow-y: hidden;      /* Ẩn cuộn dọc */
+  -ms-overflow-style: none;/* Ẩn scrollbar trên IE và Edge cũ */
+  scrollbar-width: none;   /* Ẩn scrollbar trên Firefox */
 }
 .carousel-track::-webkit-scrollbar {
-  display: none;             
+  display: none;           /* Ẩn scrollbar trên Chrome, Safari, Opera */
 }
-.card {
-  position: relative;       
-  padding: 1rem;      
-  border-radius: 12px;     
 
+.card {
+  position: relative;      /* Cho phép đặt label hoặc icon bên trong vị trí tuyệt đối */
+  padding: 1rem;           /* Khoảng đệm xung quanh nội dung card */
+  border-radius: 12px;     /* Bo góc mềm mại cho card */
+  /* Có thể thêm border: 1px solid #eee; để phân cách rõ card */
 }
+
 .card:hover {
-  border-color: #2196f3;    
-  box-shadow: 0 0 10px rgba(33, 150, 243, 0.3);
+  border-color: #2196f3;   /* Đổi màu viền khi hover để nhấn mạnh */
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.3); /* Thêm bóng nhẹ khi hover */
 }
+
 .card img {
-  margin: 20px 5px 15px 20px;  
-  object-fit: contain;      
-  max-width: 100% ;       
-  height: auto;             
+  margin: 20px 5px 15px 20px; /* Thêm lề xung quanh ảnh để không bị dính chữ hoặc khung */
+  object-fit: contain;        /* Giữ tỉ lệ ảnh, không bị bóp méo */
+  max-width: 100%;            /* Ảnh không vượt quá kích thước khung card */
+  height: auto;               /* Tự điều chỉnh chiều cao theo tỉ lệ */
 }
+
 .stock-label {
-  position: absolute;       
-  display: flex;            
-  background: #fff;
-  padding: 0.25em 0;
-  gap: 1rem;
+  position: absolute;       /* Đặt label ở góc card theo tọa độ */
+  display: flex;            /* Cho phép căn chữ và icon nằm hàng ngang */
+  background: #fff;         /* Nền trắng để nổi bật trên ảnh */
+  padding: 0.25em 0;        /* Thêm padding trên dưới, để label không quá dày */
+  gap: 1rem;                /* Khoảng cách giữa các span con bên trong label */
+  top: 1rem;                /* Vị trí cách đỉnh card 1rem */
+  left: 1rem;               /* Vị trí cách trái card 1rem */
+  border-radius: 999px;     /* Bo tròn hoàn toàn để dáng pill */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Bóng nhẹ cho label */
 }
+
 .stock-label span {
-  line-height: 1;           
- 
+  line-height: 1;           /* Đảm bảo chiều cao dòng khít với nội dung */
 }
+
 .reviews {
-  color: #ffb400;         
+  color: #ffb400;           /* Màu vàng để biểu thị đánh giá sao */
+  font-size: 1rem;          /* Kích thước font cho phần đánh giá */
 }
+
 .product-title {
-  font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal;
-  line-height: 1.4;
-  margin: 0.5rem 0;
+  font-size: 0.9rem;        /* Kích thước chữ phù hợp với thẻ sản phẩm */
+  font-family: 'Poppins', sans-serif; /* Font chữ mềm mại, hiện đại */
+  font-weight: normal;      /* Độ đậm chữ bình thường */
+  line-height: 1.4;         /* Khoảng cách dòng dễ đọc */
+  margin: 0.5rem 0;         /* Khoảng cách trên dưới so với các phần tử khác */
 }
+
 .title-line {
-  display: block;           
+  display: block;           /* Mỗi dòng title tạo thành block riêng */
 }
+
 .price {
-  font-weight: bold;
+  font-weight: bold;        /* Đậm chữ cho phần giá */
 }
+
 .price .old {
-  display: block;
-  color: #bbb;             
-  font-weight: normal;
-  text-decoration: line-through;
+  display: block;           /* Hiện giá cũ trên dòng riêng */
+  color: #bbb;              /* Màu xám nhạt để giảm nổi bật */
+  font-weight: normal;      /* Không đậm như giá hiện tại */
+  text-decoration: line-through; /* Gạch ngang thể hiện giá cũ */
 }
+
 .price .current {
-  color: #000;              
-  font-size: 1.25rem;       
+  color: #000;              /* Màu đen cho giá hiện tại */
+  font-size: 1.25rem;       /* Kích thước lớn hơn để nổi bật */
 }
+
 .nav-btn {
-  position: absolute;
-  top: 50%;                               
-  transform: translateY(-50%);
-  width: 3.5rem;
+  position: absolute;       /* Đặt nút ở ngoài track, tràn lên container */
+  top: 50%;                 /* Canh giữa theo chiều dọc */
+  transform: translateY(-50%); /* Dịch lên nửa chiều cao để thực sự giữa */
+  width: 3.5rem;            /* Kích thước vuông cho nút */
   height: 3.5rem;
-  border: none;
-  border-radius: 50%;
-  background: #d0ecff;                    
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;                          
-  font-size: 2rem;
-  color: #ffc107;                         
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
+  border: none;             /* Bỏ viền mặc định */
+  border-radius: 50%;       /* Bo tròn thành hình tròn */
+  background: #d0ecff;      /* Nền xanh nhạt */
+  display: flex;            /* Dùng flex để căn icon */
+  align-items: center;      /* Canh giữa theo chiều dọc */
+  justify-content: center;  /* Canh giữa theo chiều ngang */
+  cursor: pointer;          /* Con trỏ tay khi hover */
+  z-index: 10;              /* Đảm bảo nút nằm trên mọi phần tử khác */
+  font-size: 2rem;          /* Kích thước icon lớn */
+  color: #ffc107;           /* Màu icon vàng */
+  font-weight: bold;        /* Icon đậm */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+  transition: background 0.3s ease; /* Hiệu ứng chuyển nền mượt mà */
 }
+
 .nav-btn.prev {
-  left: 2rem;                             
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 0;
+  left: 2rem;                             /* Vị trí cách trái container */
+  border-top-right-radius: 50%;           /* Bo góc phải phía trên */
+  border-bottom-right-radius: 50%;        /* Bo góc phải phía dưới */
+  border-top-left-radius: 0;              /* Không bo góc trái */
   border-bottom-left-radius: 0;
 }
+
 .nav-btn.next {
-  right: 0.5rem;                          
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-top-right-radius: 0;
+  right: 0.5rem;                          /* Vị trí cách phải container */
+  border-top-left-radius: 50%;            /* Bo góc trái phía trên */
+  border-bottom-left-radius: 50%;         /* Bo góc trái phía dưới */
+  border-top-right-radius: 0;             /* Không bo góc phải */
   border-bottom-right-radius: 0;
 }
+
 .nav-btn:hover {
-  background: #51b3ff;                   
-}
-@media (min-width: 64rem) {
-  .card {
-    width: 18rem; 
-  }
+  background: #51b3ff; /* Màu nền đậm hơn khi hover để người dùng biết có thể click */
 }

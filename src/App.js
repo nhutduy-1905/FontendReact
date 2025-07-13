@@ -4,6 +4,8 @@ import Header from './Components/Header';
 import Banner from './Components/Banner';
 import ProductCarousel from './Components/ProductCarousel'
 import ZipBanner from './Components/ZipBanner'
+import ProductGrid from './Components/ProductGrid'
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
   <Banner />
   <ProductCarousel/>
   <ZipBanner />
+  <ProductGrid />
   </>
   
            
